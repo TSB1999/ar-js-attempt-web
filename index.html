@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR</title>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+
+      <a-assets>
+        <video id="vid" src="assets/banana.mp4" loop="true" crossorigin>
+      </a-assets>
+
+      <a-marker preset="custom" type = "pattern" url = 'assets/pattern-Screen Recording 2020-11-23 at 13.33.42.patt' vidhandler>
+        <a-video  rotation="-90 0 0" vidhandler src="assets/banana.mp4" ></a-video>
+      </a-marker>
+      <a-entity camera> </a-entity>
+    </a-scene>
+  </body>
+</html>
