@@ -13,11 +13,13 @@
           if (document.querySelector("a-marker").object3D.visible == true) {
             if (!this.toggle) {
               this.toggle = true;
-              document.querySelector("#vid").play();
+              document.querySelector("#vid").load();
+              // document.querySelector("#vid").play();
             }
           } else {
             this.toggle = false;
             document.querySelector("#vid").pause();
+            
           }
         },
       });
